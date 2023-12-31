@@ -1,0 +1,70 @@
+{
+  "version": "connections-0.1",
+  "connections": [
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler0",
+      "target": "root/Default/cloud.Counter",
+      "name": "peek()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler0",
+      "target": "root/Default/cloud.Counter",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler0",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler1",
+      "target": "root/Default/cloud.Counter",
+      "name": "inc()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler1",
+      "target": "root/Default/cloud.Counter",
+      "name": "peek()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler1",
+      "target": "root/Default/cloud.Counter",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler1",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler2",
+      "target": "root/Default/cloud.Counter",
+      "name": "set()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler2",
+      "target": "root/Default/cloud.Counter",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler2",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler3",
+      "target": "root/Default/cloud.Counter",
+      "name": "set()"
+    },
+    {
+      "source": "root/Default/cloud.Api/OnRequestHandler3",
+      "target": "root/Default/cloud.Counter",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/cloud.Api",
+      "target": "root/Default/cloud.Api/OnRequestHandler3",
+      "name": "get()"
+    }
+  ]
+}

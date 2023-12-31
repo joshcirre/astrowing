@@ -1,0 +1,37 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <script is:inline src="/wing.js"></script>
+  </head>
+  <body>
+    <h1>Astro is great.</h1>
+    <a href="/foo">Go to /foo</a>
+    <p id="fromServer"></p>
+    <button>Random Count</button>
+    <script>
+      let serverUrl = window.wingEnv["APP_SERVER_URL"];
+
+      fetch(serverUrl + "/api/getcount")
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("fromServer").innerText = data;
+        });
+
+      document.querySelector("button").addEventListener("click", () => {
+        fetch(serverUrl + "/api/random")
+          .then((res) => res.json())
+          .then((data) => {
+            document.getElementById("fromServer").innerText = data;
+          });
+      });
+    </script>
+  </body>
+</html>
